@@ -43,7 +43,8 @@ public class Luta {
                 System.out.println("Ouve empate entre os lutadores, " + desafiado.getName()+" e "+desafiante.getName());
             } else if (vencedor == 2){
                 desafiado.perderLuta();
-                desafiante.ganharLuta();System.out.println("\n#####RESULTADO DA LUTA####");
+                desafiante.ganharLuta();
+                System.out.println("\n#####RESULTADO DA LUTA####");
                 System.out.println("O desafiante, " + desafiante.getName() + " venceu!");
             }
         } else {

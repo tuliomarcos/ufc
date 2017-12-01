@@ -1,7 +1,15 @@
 package UltimateFightCombat;
+import conexao.ConectaBanco;
 
 public class UfcProgram {
     public static void main(String[] args) {
+//        ConectaBanco conect = new ConectaBanco();
+//        conect.conexao();
+        
+        
+        
+        
+        
         Lutador l[] = new Lutador [6];
         l[0] = new Lutador("Pretty boy", "França", 31, 1.75, 68.9, 11, 3, 1);
         l[1] = new Lutador("Putscript", "Brasil", 29, 1.68, 57.8, 14, 2, 3);
@@ -12,13 +20,22 @@ public class UfcProgram {
         
         Luta ufc = new Luta();
         
-        l[1].apresentar();
+        l[0].apresentar();
         l[3].apresentar();
-        
-        l[1].setWeight(l[1].getWeight() + 15);
-        ufc.marcarLuta(l[1], l[3]);
+
+        ufc.marcarLuta(l[0], l[3]);
+        ufc.lutar();
+        l[0].setWeight(l[0].getWeight() + 15);
+        ufc.marcarLuta(l[0], l[3]);
         ufc.lutar();
         l[3].status();
+        
+        ufc.marcarLuta(l[3], l[2]);
+        ufc.lutar();
+//        l[0].apresentar();
+//        ufc.marcarLuta(l[1], l[3]);
+//        ufc.lutar();
+//        l[3].status();
     }
     
 }
